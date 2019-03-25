@@ -1,0 +1,17 @@
+1、从远端克隆
+git clone http://*********
+2、在项目目录进入git bush命令行工具
+3、切换至需要更新的分支branch
+git checkout *branch-name*
+4、在目录中进行相应的更改
+5、更新后的提交
+首先： git add .   --将更新写入commit缓存，进行错误检查
+其次： git commit -m “*相关的版本信息*” --提交，并附属相应的变更信息，如版本号等
+最后： git push   --将相应更改提交至对应分支
+6、如果变更上版完成，则需要将分支合并到主分支（一般为master）
+首先： git checkout master --切换到主分支
+其次： git merge *对应分支名，如branch-name* --将分支变动合并到主分支
+最后： git push --提交主分支变更
+
+*7、如果需要再远端新建新的分支或者直接在远端删除某些内容，则在远端新建分支后
+	git pull --将远端变更同步到本地
